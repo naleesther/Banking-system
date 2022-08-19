@@ -39,10 +39,12 @@ class Transaction(models.Model):
     amount=models.IntegerField()
     number=models.IntegerField()
     code=models.CharField(max_length=10,null=True)
-    Wallet=models.ForeignKey(to=Wallet,on_delete=models.CASCADE)
+    wallet=models.ForeignKey(to=Wallet,on_delete=models.CASCADE)
     transaction_type=models.CharField(max_length=15)
     Receipt=models.ForeignKey(to=Customer,on_delete=models.CASCADE)
     transaction_charge=models.IntegerField()
+    origin_account=models.ForeignKey(to=Account,on_delete=models.CASCADE, related_name="origin_transaction", null=True)
+    destination_account=models.ForeignKey(to=Account,on_delete=models.CASCADE, related_name="destination_transaction", null=True)
     
 class ThirdParty(models.Model):
     name=models.CharField(max_length=15,null=True)
@@ -68,13 +70,11 @@ class Notification(models.Model):
     status=models.CharField(max_length=6,null=True)
 
 
-class Reciept(models.Model):
-    reciept_type=models.CharField(max_length=15,null=True)
-    file=models.FileField()
-    date=models.DateTimeField()  
-    transaction=models.ForeignKey(Transaction,on_delete=models.CASCADE,null=True)
-    receipt_number=models.CharField(max_length=15,null=True)
-    description=models.TextField(null=True)
+class Receipt(models.Model):
+    receipt_type = models.CharField(null=True, max_length=10)
+    date = models.DateTimeField(null=True)
+    transaction = models.ForeignKey(null=True, to=Transaction, on_delete=models.CASCADE, related_name='receipt_transaction')
+    file = models.FileField(null=True)
 
 class Loan(models.Model):
     loan_amount=models.IntegerField(null=True)
@@ -93,12 +93,12 @@ class Reward(models.Model):
     reward_reciepient=models.CharField(max_length=15,null=True)
     date=models.DateTimeField()
     wallet=models.ForeignKey(Wallet,on_delete=models.CASCADE,null=True)
-    points=models.IntegerField()
+    points=models.IntegerField(null=True)
 
-# class Currency(models.Model):
-#     country_origin=models.CharField(max_length=10,null=True)
-#     Symbol=models.CharField(max_length=10,null=True)
-#     amount=models.BigIntegerField()    
+class Currency(models.Model):
+    country_origin=models.CharField(max_length=10,null=True)
+    Symbol=models.CharField(max_length=10,null=True)
+    amount=models.BigIntegerField()    
 
 
     
