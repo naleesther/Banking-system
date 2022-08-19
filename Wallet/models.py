@@ -41,7 +41,7 @@ class Transaction(models.Model):
     code=models.CharField(max_length=10,null=True)
     wallet=models.ForeignKey(to=Wallet,on_delete=models.CASCADE)
     transaction_type=models.CharField(max_length=15)
-    Receipt=models.ForeignKey(to=Customer,on_delete=models.CASCADE)
+    receipt=models.ForeignKey(to=Customer,on_delete=models.CASCADE)
     transaction_charge=models.IntegerField()
     origin_account=models.ForeignKey(to=Account,on_delete=models.CASCADE, related_name="origin_transaction", null=True)
     destination_account=models.ForeignKey(to=Account,on_delete=models.CASCADE, related_name="destination_transaction", null=True)
