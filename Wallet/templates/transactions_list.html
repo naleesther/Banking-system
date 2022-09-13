@@ -1,0 +1,29 @@
+<table>
+    <th>
+       <td>date</td>
+       <td>amount</td>
+       <td>number</td>
+       <td>code</td>
+       <td>wallet</td>
+       <td>receipt</td>
+       <td>transaction_charge</td>
+       <td>origin_account</td>
+       <td>destination_account</td>
+
+
+    </th>
+   {% for Transaction in transactions %}
+   <tr>
+       <td> {{Transaction.date}} </td>
+       <td> {{Transaction.amount}} </td>
+       <td> {{Transaction.number}}</td> 
+       <td> {{Transaction.code}} </td>
+       <td> {{Transaction.wallet}} </td>
+       <td> {{Transaction.receipt}} </td>
+       <td> {{Transaction.transaction_charge}} </td> 
+       <td> {{Transaction.origin_account}} </td>
+       <td> {{Transaction.destination_account}}</td> 
+ 
+    </tr>
+   {%endfor%}
+</table>

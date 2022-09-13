@@ -1,0 +1,18 @@
+<table>
+    <th>
+       <td>country_origin</td>
+       <td> Symbol</td>
+       <td>amount</td>
+
+       
+    </th>
+   {% for Currency in currencys %}
+   <tr>
+       <td> {{Currency.country_origin}} </td>
+       <td> {{Currency.Symbol}} </td>
+       <td> {{Currency.amount}}</td> 
+       
+
+    </tr>
+   {%endfor%}
+</table>
