@@ -1,10 +1,26 @@
 
+    <style>
+        table th, td  {
+          border: 1px solid;
+          padding: 10px;
+        }
+        th{
+          color: white;
+          background-color: rgb(18, 21, 216);
+        }
+        table {
+          width: 80%;
+          border-collapse: collapse;
+          margin-left: 10%;
+        }
+    </style>
+    
     <table>
-        <th>
-       <td>First Name </td>
-       <td>Age </td>
-       <td>Email</td>
-        </th>
+        <tr>
+       <th>First Name </th>
+       <th>Age </th>
+       <th>Email</th>
+        </tr>
        {%for customer in customer %}
        <tr>
            <td> {{customer.first_name}} </td>
@@ -13,3 +29,6 @@
        </tr>
        {%endfor%}
     </table>
+
+
+

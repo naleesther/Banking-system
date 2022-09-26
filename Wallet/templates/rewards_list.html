@@ -1,12 +1,30 @@
+
+<style>
+   table th, td  {
+     border: 1px solid;
+     padding: 10px;
+   }
+   th{
+     color: white;
+     background-color: rgb(18, 21, 216);
+   }
+   table {
+     width: 80%;
+     border-collapse: collapse;
+     margin-left: 10%;
+   }
+</style>
+
+
 <table>
-    <th>
-       <td>reward_reciepient</td>
-       <td>date</td>
-       <td>wallet</td>
-       <td>points</td>
+    <tr>
+       <th>reward_reciepient</th>
+       <th>date</th>
+       <th>wallet</th>
+       <th>points</th>
     
        
-    </th>
+    </tr>
    {% for Reward in rewards %}
    <tr>
        <td> {{Reward.reward_reciepient}} </td>

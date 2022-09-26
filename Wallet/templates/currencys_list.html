@@ -1,11 +1,30 @@
+
+<style>
+   table th, td  {
+     border: 1px solid;
+     padding: 10px;
+   }
+   th{
+     color: white;
+     background-color: rgb(18, 21, 216);
+   }
+   table {
+     width: 80%;
+     border-collapse: collapse;
+     margin-left: 10%;
+   }
+</style>
+
+
+
 <table>
-    <th>
-       <td>country_origin</td>
-       <td> Symbol</td>
-       <td>amount</td>
+    <tr>
+       <th>country_origin</th>
+       <th> Symbol</th>
+       <th>amount</th>
 
        
-    </th>
+    </tr>
    {% for Currency in currencys %}
    <tr>
        <td> {{Currency.country_origin}} </td>

@@ -1,12 +1,30 @@
 
-    <table>
-        <th>
-           <td>account_name</td>
-           <td>account_number</td>
-           <td>account_type</td>
-           <td>balance</td>
+<style>
+   table th, td  {
+     border: 1px solid;
+     padding: 10px;
+   }
+   th{
+     color: white;
+     background-color: rgb(18, 21, 216);
+   }
+   table {
+     width: 80%;
+     border-collapse: collapse;
+     margin-left: 10%;
+   }
+</style>
 
-        </th>
+    
+    
+    <table>
+        <tr>
+           <th>account_name</th>
+           <th>account_number</th>
+           <th>account_type</th>
+           <th>balance</th>
+
+        </tr>
        {% for account in accounts%}
        <tr>
            <td> {{account.account_name}} </td>

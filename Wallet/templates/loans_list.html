@@ -1,18 +1,37 @@
+
+<style>
+   table th, td  {
+     border: 1px solid;
+     padding: 10px;
+   }
+   th{
+     color: white;
+     background-color: rgb(18, 21, 216);
+   }
+   table {
+     width: 80%;
+     border-collapse: collapse;
+     margin-left: 10%;
+   }
+</style>
+
+
+
 <table>
-    <th>
-       <td>loan_amount</td>
-       <td>loan_intrest</td>
-       <td>due_date</td>
-       <td>loan_ID</td>
-       <td>purpose</td>
-       <td>loan_status</td>
-       <td>date_issued</td>
-       <td>wallet</td>
-       <td>balance</td>
-       <td>guarantor</td>
+    <tr>
+       <th>loan_amount</th>
+       <th>loan_intrest</th>
+       <th>due_date</th>
+       <th>loan_ID</th>
+       <th>purpose</th>
+       <th>loan_status</th>
+       <th>date_issued</th>
+       <th>wallet</th>
+       <th>balance</th>
+       <th>guarantor</th>
 
        
-    </th>
+    </tr>
    {% for Loan in loans %}
    <tr>
        <td> {{Loan.loan_amount}} </td>
@@ -23,7 +42,6 @@
        <td> {{Loan.loan_status}} </td>
        <td> {{Loan.date_issued}} </td>
        <td> {{Loan.wallet}} </td>
-       <td> {{Loan.balance}} </td>
        <td> {{Loan.balance}} </td>
        <td> {{Loan.guarantor}} </td>
 

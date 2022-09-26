@@ -1,18 +1,31 @@
+
+<style>
+   table th, td  {
+     border: 1px solid;
+     padding: 10px;
+   }
+   th{
+     color: white;
+     background-color: rgb(18, 21, 216);
+   }
+   table {
+     width: 80%;
+     border-collapse: collapse;
+     margin-left: 10%;
+   }
+</style>
+
+
 <table>
-    <th>
-       <td>card_name</td>
-       <td>card_number</td>
-       <td>card_type</td>
-       <td>expiry_date</td>
-       <td>security_code</td>
-       <td>account</td>
-       <td>issuer</td>
-
-
-
-       
-
-    </th>
+    <tr>
+       <th>card_name</th>
+       <th>card_number</th>
+       <th>card_type</th>
+       <th>expiry_date</th>
+       <th>security_code</th>
+       <th>account</th>
+       <th>issuer</th>
+    </tr>
    {% for Card in cards %}
    <tr>
        <td> {{Card.card_name}} </td>

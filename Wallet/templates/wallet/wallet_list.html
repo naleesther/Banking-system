@@ -1,18 +1,32 @@
-<table>
-    <th>
-       <td>balance</td>
-       <td>pin</td>
-       <!-- <td>account_type</td>
-       <td>balance</td> -->
 
-    </th>
+<style>
+   table th, td  {
+     border: 1px solid;
+     padding: 10px;
+   }
+   th{
+     color: white;
+     background-color: rgb(18, 21, 216);
+   }
+   table {
+     width: 80%;
+     border-collapse: collapse;
+     margin-left: 10%;
+   }
+</style>
+
+
+<table>
+    <tr>
+       <th>balance</th>
+       <th>pin</th>
+       
+    </tr>
    {% for wallet in wallets %}
    <tr>
        <td> {{wallet.balance}} </td>
        <td> {{wallet.pin}} </td>
-       <!-- <td> {{account.account_type}} </td>
-       <td> {{account.balance}} </td> -->
-
+       
     </tr>
    {%endfor%}
 </table>

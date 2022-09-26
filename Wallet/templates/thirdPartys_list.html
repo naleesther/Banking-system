@@ -1,12 +1,29 @@
+<style>
+   table th, td  {
+     border: 1px solid;
+     padding: 10px;
+   }
+   th{
+     color: white;
+     background-color: rgb(18, 21, 216);
+   }
+   table {
+     width: 80%;
+     border-collapse: collapse;
+     margin-left: 10%;
+   }
+</style>
+
+
 <table>
-    <th>
-       <td>name</td>
-       <td>currency</td>
-       <td>transaction_cost</td>
-       <td>account</td>
+    <tr>
+       <th>name</th>
+       <th>currency</th>
+       <th>transaction_cost</th>
+       <th>account</th>
        
 
-    </th>
+    </tr>
    {% for ThirdParty in thirdPartys %}
    <tr>
        <td> {{ThirdParty.name}} </td>

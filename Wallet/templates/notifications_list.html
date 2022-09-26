@@ -1,13 +1,32 @@
+<style>
+   table th, td  {
+     border: 1px solid;
+     padding: 10px;
+   }
+   th{
+     color: white;
+     background-color: rgb(18, 21, 216);
+   }
+   table {
+     width: 80%;
+     border-collapse: collapse;
+     margin-left: 10%;
+   }
+</style>
+
+
+
 <table>
-    <th>
-       <td>title</td>
-       <td>message</td>
-       <td>date</td>
-       <td>recipient</td>
-       <td>status</td>
+
+    <tr>
+       <th>title</th>
+       <th>message</th>
+       <th>date</th>
+       <th>recipient</th>
+       <th>status</th>
        
 
-    </th>
+    </tr>
    {% for Notification in notifications %}
    <tr>
        <td> {{Notification.title}} </td>

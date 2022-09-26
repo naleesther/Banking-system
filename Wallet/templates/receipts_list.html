@@ -1,11 +1,27 @@
+<style>
+   table th, td  {
+     border: 1px solid;
+     padding: 10px;
+   }
+   th{
+     color: white;
+     background-color: rgb(18, 21, 216);
+   }
+   table {
+     width: 80%;
+     border-collapse: collapse;
+     margin-left: 10%;
+   }
+</style>
+
 <table>
-    <th>
-       <td>receipt_type</td>
-       <td>date</td>
-       <td>transaction</td>
-       <td>file</td>
+    <tr>
+       <th>receipt_type</th>
+       <th>date</th>
+       <th>transaction</th>
+       <th>file</th>
        
-    </th>
+    </tr>
    {% for Receipt in receipts %}
    <tr>
        <td> {{Receipt.receipt_type}} </td>
