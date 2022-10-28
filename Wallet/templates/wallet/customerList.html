@@ -20,15 +20,20 @@
        <th>First Name </th>
        <th>Age </th>
        <th>Email</th>
+       <th>Profile</th>
+       
         </tr>
        {%for customer in customer %}
        <tr>
            <td> {{customer.first_name}} </td>
            <td> {{customer.age}} </td>
            <td> {{customer.email}} </td>
+           <td><a  href="{%url 'customer_profile' id=customer.id%}"> View Profile</a>{{customer.profile}}</td>
        </tr>
        {%endfor%}
     </table>
+
+
 
 
 

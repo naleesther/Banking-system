@@ -19,6 +19,9 @@ class Customer (models.Model):
     email = models.EmailField()
     phonenumber = models.CharField(max_length=10,null=True)
     age = models.PositiveSmallIntegerField()
+    profile_picture = models.ImageField(default='default.jpg', upload_to='profile_pics')
+
+
 
 class Account(models.Model):
     account_name=models.CharField(max_length=15,null=True)

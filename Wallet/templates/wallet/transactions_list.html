@@ -26,10 +26,11 @@
        <th>transaction_charge</th>
        <th>origin_account</t>
        <th>destination_account</th>
+       <th>profile</th>
 
 
     </tr>
-   {% for Transaction in transactions %}
+   {% for Transaction in transaction %}
    <tr>
        <td> {{Transaction.date}} </td>
        <td> {{Transaction.amount}} </td>
@@ -41,6 +42,8 @@
        <td> {{Transaction.origin_account}} </td>
        <td> {{Transaction.destination_account}}</td> 
  
+  <td><a  href="{%url 'transactions_profile' id=transaction.id%}"> View Profile</a>{{account.transaction}}</td>
+
     </tr>
    {%endfor%}
 </table>

@@ -20,12 +20,15 @@
     <tr>
        <th>balance</th>
        <th>pin</th>
+       <th>profile</th>
        
     </tr>
    {% for wallet in wallets %}
    <tr>
        <td> {{wallet.balance}} </td>
        <td> {{wallet.pin}} </td>
+       
+    <td><a  href="{%url 'wallet_profile' id=wallet.id%}"> View Profile</a>{{wallet.profile}}</td>
        
     </tr>
    {%endfor%}

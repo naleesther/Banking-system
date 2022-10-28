@@ -25,6 +25,7 @@
        <th>security_code</th>
        <th>account</th>
        <th>issuer</th>
+       <th>profile</th>
     </tr>
    {% for Card in cards %}
    <tr>
@@ -36,9 +37,8 @@
        <td> {{Card.account}} </td>
        <td> {{Card.issuer}} </td>
 
+   <td><a  href="{%url 'card_profile' id=Card.id%}"> View Profile</a>{{card.profile}}</td>
 
-
-       
     </tr>
    {%endfor%}
 </table>
